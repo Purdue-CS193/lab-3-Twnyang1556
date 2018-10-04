@@ -8,6 +8,8 @@ public class BuggyUtilClient {
         System.out.println("Out: " +
         StringUtils.makePurdueUsername("Sean", "Flannery"));
         System.out.println("I'm dying!!!!!!");
+        double x = Math.floorDiv(4, 3);
+        System.out.printf("%.5f", x);
     }
 }
 

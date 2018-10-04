@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class MathUtils {
     /**
      * divideNumbers -- a / b
@@ -5,9 +7,9 @@ public class MathUtils {
      */
     public static double divideNumbers(int dividend, int divisor) {
         /* Do some casual division ... Super easy ... Shouldn't be any problems here */
-        double res = dividend / divisor;
-        /* Return the DEFINITELY CORRECT result */
-        return res;
+
+        /* Return the DEFINITELY CORRECT result*/
+        return (double) dividend / (double) divisor;
     }
 
     /**
@@ -31,10 +33,12 @@ public class MathUtils {
         for (int i = 1; i < exp; i++) {
            res *= base;
         }
-
+//        res = MathUtils.raiseToPower(res, exp);
+        double ans;
         /* If it's a negative exponent, we should invert it! */
         if (isNegative) {
-            return MathUtils.divideNumbers(1, res);
+            ans = Math.pow(res, -1);
+            return ans;
         }
         /* Otherwise, we are safe to just return the result */
         else {
